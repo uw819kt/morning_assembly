@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>朝礼当番決め</title>
-    <script src="javascripts/name.js"></script>
+    <link href="css/deco.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/vov.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>朝礼当番決め</h1>
-    <ul>
-        <li>宮岡</li>
-        <li>荻野</li>
-        <li>高野</li>
-        <li>有馬</li>
-    </ul>
-    <button onclick="choose()">スタート</button>
-    <!--名前表示を入れる-->
+    <h1 class="main">朝礼当番決め</h1>
+    <div id="namelist">
+        <label><input type="checkbox" name="list" value="宮岡メンター" checked>宮岡メンター</label>
+        <label><input type="checkbox" name="list" value="荻野さん" checked>荻野さん</label>
+        <label><input type="checkbox" name="list" value="高野さん" checked>高野さん</label>
+        <label><input type="checkbox" name="list" value="有馬" checked>有馬</label>
+    </div>
+    <div>
+        <input type="button" class="btn" value="スタート" onclick="choose()" />
+        <!--名前表示を入れる-->
+    </div>
+    <script src="javascripts/name.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,26 @@
+//欠席者にチェック入れる
+let numbers =[]
+
+function choose() {    //ルーレットを回して表示する関数
+    const elements = document.getElementsByName("list");
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].checked) {
+           let numberElement = elements[i].value;//チェックボックスの値取得
+          numbers.push(numberElement);
+        }
+    }
+};           
+
+
+function select(array) {
+    for (let i = (numbers.length - 1); 0 < i; i--) {
+        let range = Math.floor(Math.random() * (i + 1));
+        let tmp = array[i];
+        array[i] = array[range];
+        array[range] = tmp;
+    }
+    return array;
+}
+for(let i=0; i < 2; i++) {
+    console.log(select(numbers));
+}
