@@ -12,11 +12,11 @@
 
 <body>
     <h1 class="main">朝礼当番決め</h1>
-    <div id="namelist">
-        <label><input type="checkbox" name="list" value="宮岡メンター" checked>宮岡メンター</label>
-        <label><input type="checkbox" name="list" value="荻野さん" checked>荻野さん</label>
-        <label><input type="checkbox" name="list" value="高野さん" checked>高野さん</label>
-        <label><input type="checkbox" name="list" value="有馬" checked>有馬</label>
+    <ul id="nameList"></ul>
+
+    <div>
+        <input type="text" id="nameInput" placeholder="名前を入力">
+        <button class="btn" onclick="addName()">追加</button>
     </div>
     <div>
         <input type="button" class="btn" value="スタート" onclick="choose()" />
